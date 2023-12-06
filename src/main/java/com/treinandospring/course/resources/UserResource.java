@@ -13,7 +13,7 @@ import com.treinandospring.course.entities.User;
 import com.treinandospring.course.services.UserService;
 
 @RestController
-@RequestMapping(value = "/users/")
+@RequestMapping(value = "/users")
 public class UserResource {
 	//ENDPOINT PARA ACESSAE USUARIOS
 	

@@ -14,7 +14,7 @@ import com.treinandospring.course.entities.Order;
 import com.treinandospring.course.services.OrderService;
 
 @RestController
-@RequestMapping(value = "/orders/")
+@RequestMapping(value = "/orders")
 public class OrderResource {
 	//ENDPOINT PARA ACESSAE USUARIOS
 	

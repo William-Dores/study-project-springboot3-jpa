@@ -13,7 +13,7 @@ import com.treinandospring.course.entities.Product;
 import com.treinandospring.course.services.ProductService;
 
 @RestController
-@RequestMapping(value = "/products/")
+@RequestMapping(value = "/products")
 public class ProductResource {
 
 	@Autowired
