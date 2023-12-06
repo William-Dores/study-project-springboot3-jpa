@@ -10,10 +10,12 @@ import org.springframework.context.annotation.Profile;
 
 import com.treinandospring.course.entities.Category;
 import com.treinandospring.course.entities.Order;
+import com.treinandospring.course.entities.Product;
 import com.treinandospring.course.entities.User;
 import com.treinandospring.course.entities.enums.OrderStatus;
 import com.treinandospring.course.repositories.CategoryRepository;
 import com.treinandospring.course.repositories.OrderRepository;
+import com.treinandospring.course.repositories.ProductRepository;
 import com.treinandospring.course.repositories.UserRepository;
 
 @Configuration
@@ -26,6 +28,8 @@ public class TestConfig implements CommandLineRunner {
 	private OrderRepository orderRepository;
 	@Autowired
 	private CategoryRepository categoryRepository;
+	@Autowired
+	private ProductRepository productRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -34,6 +38,13 @@ public class TestConfig implements CommandLineRunner {
 		Category c1 = new Category(null, "Eletronics");
 		Category c2 = new Category(null, "Books");
 		Category c3 = new Category(null, "Computers");
+		
+		Product p1 = new Product(null, "The Lord of the Rings", "Lorem ipsum dolor sit amet, consectetur.", 90.5, "");
+		Product p2 = new Product(null, "Smart TV", "Nulla eu imperdiet purus. Maecenas ante.", 2190.0, "");
+		Product p3 = new Product(null, "Macbook Pro", "Nam eleifend maximus tortor, at mollis.", 1250.0, "");
+		Product p4 = new Product(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, "");
+		Product p5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
+		
 		
 		
 		User u1 = new User(null, "Teste 1111", "teste1@gmail.com", "111111111", "111111");
@@ -48,7 +59,7 @@ public class TestConfig implements CommandLineRunner {
 		userRepository.saveAll(Arrays.asList(u1, u2));
 		orderRepository.saveAll(Arrays.asList(o1, o2, o3));
 		categoryRepository.saveAll(Arrays.asList(c1, c2, c3));
-		
+		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 	}
 	
 	
